@@ -88,6 +88,7 @@ app.post('/api/rooms', async (req, res) => {
   res.json(room);
 });
 
+<<<<<<< HEAD
 app.get('/api/rooms', async (req, res) => {
   const rooms = await Room.find();
   res.json(rooms);
@@ -102,4 +103,8 @@ app.delete('/api/rooms/:id', async (req, res) => {
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
+=======
+app.listen(3001, () => {
+    console.log('Server running on http://localhost:3001');
+>>>>>>> b072ac1d93ff4bdddf53a1b75f53220d33c7ee3b
 });
