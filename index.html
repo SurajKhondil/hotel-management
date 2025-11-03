@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Palace Hotel - Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Pattern Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="public-nav glass-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-hotel"></i>
+                <span>Grand Palace Hotel</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="book.html" class="nav-link">Book Now</a>
+                <a href="admin.html" class="nav-link admin-link">Admin Portal</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero glass-hero" id="home" style="position:relative;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fadein" style="display: flex; flex-direction: column; align-items: center; position:relative; z-index:2;">
+            <h1 class="hero-title">
+                <span class="gradient-text" style="font-size:2.7rem;display:block;">Grand Palace Hotel</span>
+            </h1>
+            <span class="hero-welcome">Welcome to</span>
+            <span class="hero-desc">Experience <span class="highlight">luxury</span> and <span class="highlight">comfort</span> in the heart of the city</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose <span class="gradient-text">Grand Palace</span></h2>
+            <div class="features-grid">
+                <div class="feature-card glass-card animate-up">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Free WiFi</h3>
+                    <p>High-speed internet access throughout the hotel</p>
+                </div>
+                <div class="feature-card glass-card animate-up">
+                    <div class="feature-icon"><i class="fas fa-swimming-pool"></i></div>
+                    <h3>Infinity Pool</h3>
+                    <p>Rooftop pool with panoramic city views</p>
+                </div>
+                <div class="feature-card glass-card animate-up">
+                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Fine Dining</h3>
+                    <p>Michelin-starred restaurants & bars</p>
+                </div>
+                <div class="feature-card glass-card animate-up">
+                    <div class="feature-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Spa & Wellness</h3>
+                    <p>Full-service spa and fitness center</p>
+                </div>
+                <div class="feature-card glass-card animate-up">
+                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                    <h3>Valet Parking</h3>
+                    <p>Complimentary valet parking for all guests</p>
+                </div>
+                <div class="feature-card glass-card animate-up">
+                    <div class="feature-icon"><i class="fas fa-concierge-bell"></i></div>
+                    <h3>24/7 Concierge</h3>
+                    <p>Personalized service for every guest</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming <span class="gradient-text">Events</span></h2>
+            <div class="events-filters">
+                <input type="text" id="eventSearch" placeholder="Search events...">
+                <select id="eventCategory">
+                    <option value="">All Categories</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Business">Business</option>
+                    <option value="Food">Food</option>
+                    <option value="Music">Music</option>
+                    <option value="Spa">Spa</option>
+                    <option value="Holiday">Holiday</option>
+                    <option value="Tour">Tour</option>
+                    <option value="Party">Party</option>
+                </select>
+            </div>
+            <div id="eventsList" class="events-grid"></div>
+        </div>
+    </section>
+
+    <!-- Room Types Section -->
+    <section class="room-types-section">
+        <div class="container">
+            <h2 class="section-title">Our <span class="gradient-text">Room Types</span></h2>
+            <div class="rooms-showcase">
+                <div class="room-showcase glass-card animate-up">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Standard Room" class="room-image">
+                    <div class="room-details">
+                        <h3>Standard Room</h3>
+                        <p>Comfortable and affordable rooms with modern amenities</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> Queen Bed</span>
+                            <span><i class="fas fa-tv"></i> Smart TV</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="room-price">$99/night</div>
+                    </div>
+                </div>
+                <div class="room-showcase glass-card animate-up">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="Deluxe Room" class="room-image">
+                    <div class="room-details">
+                        <h3>Deluxe Room</h3>
+                        <p>Spacious rooms with premium furnishing and city views</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-couch"></i> Seating Area</span>
+                            <span><i class="fas fa-coffee"></i> Coffee Maker</span>
+                        </div>
+                        <div class="room-price">$149/night</div>
+                    </div>
+                </div>
+                <div class="room-showcase glass-card animate-up">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Executive Suite" class="room-image">
+                    <div class="room-details">
+                        <h3>Executive Suite</h3>
+                        <p>Luxurious suites with separate living area and premium amenities</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-home"></i> Living Room</span>
+                            <span><i class="fas fa-bath"></i> Jacuzzi</span>
+                            <span><i class="fas fa-glass-cheers"></i> Mini Bar</span>
+                        </div>
+                        <div class="room-price">$249/night</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Forms -->
+    <div class="modal" id="roomModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Room</h2>
+            <form id="roomForm">
+                <div class="form-group">
+                    <label>Room Number</label>
+                    <input type="text" name="roomNumber" required>
+                </div>
+                <div class="form-group">
+                    <label>Room Type</label>
+                    <select name="roomType" required>
+                        <option value="Standard">Standard Room</option>
+                        <option value="Deluxe">Deluxe Room</option>
+                        <option value="Executive">Executive Suite</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Price per Night</label>
+                    <input type="number" name="price" required>
+                </div>
+                <button type="submit" class="btn btn-gradient">Add Room</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>New Reservation</h2>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label>Guest Name</label>
+                    <input type="text" name="guestName" required>
+                </div>
+                <div class="form-group">
+                    <label>Check-in Date</label>
+                    <input type="date" name="checkIn" required>
+                </div>
+                <div class="form-group">
+                    <label>Check-out Date</label>
+                    <input type="date" name="checkOut" required>
+                </div>
+                <div class="form-group">
+                    <label>Room Type</label>
+                    <select name="roomType" required>
+                        <option value="Standard">Standard Room</option>
+                        <option value="Deluxe">Deluxe Room</option>
+                        <option value="Executive">Executive Suite</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Guests</label>
+                    <input type="number" name="guestCount" min="1" required>
+                </div>
+                <button type="submit" class="btn btn-gradient">Make Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="guestModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Guest</h2>
+            <form id="guestForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>ID Type</label>
+                    <select name="idType" required>
+                        <option value="passport">Passport</option>
+                        <option value="driverLicense">Driver's License</option>
+                        <option value="nationalId">National ID</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>ID Number</label>
+                    <input type="text" name="idNumber" required>
+                </div>
+                <button type="submit" class="btn btn-gradient">Add Guest</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <p>&copy; 2025 Grand Palace Hotel. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="hotelManager.js"></script>
+</body>
+</html>
