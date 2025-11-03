@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/hotel_management', {
+mongoose.connect('mongodb+srv://surajkhondil3011:<db_password>@surajapi.8hfmx6j.mongodb.net/?appName=SurajApI', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
