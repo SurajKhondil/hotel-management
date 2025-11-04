@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
 
 const app = express();
 app.use(cors());
@@ -102,6 +104,9 @@ app.put('/api/reservations/:id', async (req, res) => {
     const updated = await Reservation.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.json(updated);
 });
+// Serve static files from the current directory
+const path = require('path');
+app.use(express.static(path.join(__dirname)));
 
 // -------------------- Server Start --------------------
 const PORT = process.env.PORT || 3001;
