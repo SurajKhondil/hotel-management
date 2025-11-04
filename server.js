@@ -97,6 +97,11 @@ app.delete('/api/rooms/:id', async (req, res) => {
   await Room.findByIdAndDelete(req.params.id);
   res.json({ success: true });
 });
+// Add this to your server.js
+app.put('/api/reservations/:id', async (req, res) => {
+    const updated = await Reservation.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(updated);
+});
 
 // -------------------- Server Start --------------------
 const PORT = process.env.PORT || 3001;
